@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>MySQL练习</title>
+      <link href="/xg-123456.gtihub.io/2021/09/15/mysql-lian-xi/"/>
+      <url>/xg-123456.gtihub.io/2021/09/15/mysql-lian-xi/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\xg-123456.gtihub.io\assets\css\APlayer.min.css"><script src="\xg-123456.gtihub.io\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="MySQL练习"><a href="#MySQL练习" class="headerlink" title="MySQL练习"></a>MySQL练习</h1><h2 id="查找入职员工某排名第几位的员工所有信息-此类题目"><a href="#查找入职员工某排名第几位的员工所有信息-此类题目" class="headerlink" title="查找入职员工某排名第几位的员工所有信息 此类题目"></a>查找入职员工某排名第几位的员工所有信息 此类题目</h2><ul><li>limit<br>分页，限制数据显示。<br>select *from emp limit 5;  # 限制前5条数据<br>select *from emp limit 5, 5;  # 从第5条开始，查询5条数据<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SELECT * FROM 表名 order by 排名属性 desc limit x,x</span><br></pre></td></tr></table></figure><h2 id="两个表连接问题"><a href="#两个表连接问题" class="headerlink" title="两个表连接问题"></a>两个表连接问题</h2></li><li>查找当前薪水详情以及部门编号dept_no</li><li>表格数据<br>![0P_0KYOV6VJO2`~G_1R7_B2.png](<a href="https://i.loli.net/2021/09/15/1xH8OutMR65lXYS.png">https://i.loli.net/2021/09/15/1xH8OutMR65lXYS.png</a>)<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">select sa.emp_no, sa.salary , sa.from_date,sa.to_date, de.dept_no</span><br><span class="line">from salaries sa </span><br><span class="line">right join dept_manager de </span><br><span class="line">on sa.emp_no=de.emp_no</span><br></pre></td></tr></table></figure></li><li>重点区分左右连接区别（下图左边右连接 右边左连接）<br><img src="https://i.loli.net/2021/09/15/nKPRJryFA24SBfQ.png" alt="_E~NW_B8LD_MH081PEW9I09.png"></li><li>查找所有已经分配部门的员工的last_name和first_name以及dept_no</li><li>表格数据<br><img src="https://i.loli.net/2021/09/15/nJlq1edH2RXpVuz.png" alt="N_G_Q8_J1_HN~MA8R@P4JKV.png"></li></ul><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">select sa.last_name, sa.first_name , de.dept_no</span><br><span class="line">from employees sa </span><br><span class="line">right join dept_emp de </span><br><span class="line">on sa.emp_no=de.emp_no</span><br></pre></td></tr></table></figure><ul><li>查找所有员工的last_name和first_name以及对应部门编号dept_no</li><li>（请你查找所有已经分配部门的员工的last_name和first_name以及dept_no，也包括暂时没有分配具体部门的员工）<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">select sa.last_name, sa.first_name , de.dept_no</span><br><span class="line">from employees sa </span><br><span class="line">left join dept_emp de </span><br><span class="line">on sa.emp_no=de.emp_no</span><br></pre></td></tr></table></figure><img src="https://i.loli.net/2021/09/15/XpL17DHuQShNf4c.png" alt="NA0_KK__YXI_P5``27QL_DG.png"><h2 id="未完待续"><a href="#未完待续" class="headerlink" title="未完待续"></a>未完待续</h2></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> MySql </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> MySQL </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>用户登录功能的实现</title>
       <link href="/xg-123456.gtihub.io/2021/09/14/yong-hu-deng-lu-gong-neng-de-shi-xian/"/>
       <url>/xg-123456.gtihub.io/2021/09/14/yong-hu-deng-lu-gong-neng-de-shi-xian/</url>
