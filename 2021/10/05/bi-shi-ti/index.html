@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="9.16学习日记, 西瓜">
+    <meta name="keywords" content="笔试题, 西瓜">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>9.16学习日记 | 西瓜</title>
+    <title>笔试题 | 西瓜</title>
     <link rel="icon" type="image/png" href="/xg-123456.gtihub.io/logo.png">
 
     <link rel="stylesheet" type="text/css" href="/xg-123456.gtihub.io/libs/awesome/css/all.css">
@@ -459,12 +459,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/xg-123456.gtihub.io/medias/featureimages/15.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/xg-123456.gtihub.io/medias/featureimages/7.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">9.16学习日记</h1>
+                    <h1 class="description center-align post-title">笔试题</h1>
                 </div>
             </div>
         </div>
@@ -580,23 +580,14 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/xg-123456.gtihub.io/tags/springboot%E6%97%A5%E8%AE%B0/">
-                                <span class="chip bg-color">springboot日记</span>
+                            <a href="/xg-123456.gtihub.io/tags/%E7%BC%96%E7%A8%8B%E7%BB%83%E4%B9%A0%EF%BC%88%E7%AC%94%E8%AF%95%EF%BC%89/">
+                                <span class="chip bg-color">编程练习（笔试）</span>
                             </a>
                         
                     </div>
                     
                 </div>
                 <div class="col s5 right-align">
-                    
-                    <div class="post-cate">
-                        <i class="fas fa-bookmark fa-fw icon-category"></i>
-                        
-                            <a href="/xg-123456.gtihub.io/categories/springboot%E6%97%A5%E8%AE%B0/" class="post-category">
-                                springboot日记
-                            </a>
-                        
-                    </div>
                     
                 </div>
             </div>
@@ -605,7 +596,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-09-16
+                    2021-10-05
                 </div>
                 
 
@@ -626,41 +617,60 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="springboot日记"><a href="#springboot日记" class="headerlink" title="springboot日记"></a>springboot日记</h1><h2 id="springboot配置文件"><a href="#springboot配置文件" class="headerlink" title="springboot配置文件"></a>springboot配置文件</h2><ul>
-<li>SpringBoot使用一个全局的配置文件 ， 配置文件名称是固定的<br>application.properties<br>语法结构 ：key=value<br>application.yml<br>语法结构 ：key：空格 value  </li>
-<li>yaml配置(切记空格不能少)：<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">server：  </span><br><span class="line">  prot: 8080</span><br></pre></td></tr></table></figure></li>
-<li>语法要求严格！</li>
-</ul>
-<p>1、空格不能省略</p>
-<p>2、以缩进来控制层级关系，只要是左边对齐的一列数据都是同一个层级的。</p>
-<p>3、属性和值的大小写都是十分敏感的  </p>
-<h2 id="yaml注入配置文件实例"><a href="#yaml注入配置文件实例" class="headerlink" title="yaml注入配置文件实例"></a>yaml注入配置文件实例</h2><ul>
-<li>编写一个实体类 Dog；<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">@Component  //注册bean到容器中</span><br><span class="line">public class Dog &#123;</span><br><span class="line">    private String name;</span><br><span class="line">    private Integer age;</span><br><span class="line">    </span><br><span class="line">    //有参无参构造、get、set方法、toString()方法  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-<li>编写一个实体类Person<br>@ConfigurationProperties(prefix = “person”)//yml文件自动匹配 默认从全局配置文件中获取值；<br>@PropertySource(value = “classpath:xxx.properties”) ：加载指定的配置文件；这样的也可以完成注入<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">@Component //注册bean</span><br><span class="line">@ConfigurationProperties(prefix = &quot;person&quot;)</span><br><span class="line">public class Person &#123;</span><br><span class="line">    private String name;</span><br><span class="line">    private Integer age;</span><br><span class="line">    private Boolean happy;</span><br><span class="line">    private Date birth;</span><br><span class="line">    private Map&lt;String,Object&gt; maps;</span><br><span class="line">    private List&lt;Object&gt; lists;</span><br><span class="line">    private Dog dog;</span><br><span class="line">    </span><br><span class="line">    //有参无参构造、get、set方法、toString()方法  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-<li>在application.yml中编写<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">person:</span><br><span class="line">  name: qinjiang</span><br><span class="line">  age: 3</span><br><span class="line">  happy: false</span><br><span class="line">  birth: 2000/01/01</span><br><span class="line">  maps: &#123;k1: v1,k2: v2&#125;</span><br><span class="line">  lists:</span><br><span class="line">   - code</span><br><span class="line">   - girl</span><br><span class="line">   - music</span><br><span class="line">  dog:</span><br><span class="line">    name: 旺财</span><br><span class="line">    age: 1</span><br></pre></td></tr></table></figure></li>
-<li>test类<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">@SpringBootTest</span><br><span class="line">class DemoApplicationTests &#123;</span><br><span class="line"></span><br><span class="line">    @Autowired</span><br><span class="line">    Person person; //将person自动注入进来</span><br><span class="line"></span><br><span class="line">    @Test</span><br><span class="line">    public void contextLoads() &#123;</span><br><span class="line">        System.out.println(person); //打印person信息</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-<li>配置文件占位符<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">person:</span><br><span class="line">    name: qinjiang$&#123;random.uuid&#125; # 随机uuid</span><br><span class="line">    age: $&#123;random.int&#125;  # 随机int</span><br><span class="line">    happy: false</span><br><span class="line">    birth: 2000/01/01</span><br><span class="line">    maps: &#123;k1: v1,k2: v2&#125;</span><br><span class="line">    lists:</span><br><span class="line">      - code</span><br><span class="line">      - girl</span><br><span class="line">      - music</span><br><span class="line">    dog:</span><br><span class="line">      name: $&#123;person.hello:other&#125;_旺财</span><br><span class="line">      age: 1</span><br></pre></td></tr></table></figure>
-<h3 id="value跟-ConfigurationProperties对比"><a href="#value跟-ConfigurationProperties对比" class="headerlink" title="@value跟@ConfigurationProperties对比"></a>@value跟@ConfigurationProperties对比</h3></li>
-<li>1、@ConfigurationProperties只需要写一次即可 ，@Value则需要每个字段都添加。<br>2、松散绑定：这个什么意思呢? 比如我的yml中写的last-name，这个和lastName是一样的， - 后面跟着的字母默认是大写的。这就是松散绑定。<br>3、JSR303数据校验 ， 这个就是我们可以在字段是增加一层过滤器验证 ， 可以保证数据的合法性。<br>4、复杂类型封装，yml中可以封装对象 ， 使用value就不支持。<h2 id="添加JSR303数据校验"><a href="#添加JSR303数据校验" class="headerlink" title="添加JSR303数据校验"></a>添加JSR303数据校验</h2>&ensp;&ensp;Springboot中可以用@validated来校验数据，如果数据异常则会统一抛出异常，方便异常中心统一处理。我们这里来写个注解让我们的name只能支持Email格式；<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">@Component //注册bean</span><br><span class="line">@ConfigurationProperties(prefix = &quot;person&quot;)</span><br><span class="line">@Validated  //数据校验</span><br><span class="line">public class Person &#123;</span><br><span class="line"></span><br><span class="line">    @Email(message=&quot;邮箱格式错误&quot;) //name必须是邮箱格式</span><br><span class="line">    private String name;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-<li>如果@Email报错添加 是因为新版本需要validation启动器<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;dependency&gt;</span><br><span class="line">            &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</span><br><span class="line">            &lt;artifactId&gt;spring-boot-starter-validation&lt;/artifactId&gt;</span><br><span class="line">        &lt;/dependency&gt;​</span><br></pre></td></tr></table></figure></li>
-<li>常见参数<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">@NotNull(message=&quot;名字不能为空&quot;)</span><br><span class="line">private String userName;</span><br><span class="line">@Max(value=120,message=&quot;年龄最大不能查过120&quot;)</span><br><span class="line">private int age;</span><br><span class="line">@Email(message=&quot;邮箱格式错误&quot;)</span><br><span class="line">private String email;</span><br><span class="line"></span><br><span class="line">空检查</span><br><span class="line">@Null       验证对象是否为null</span><br><span class="line">@NotNull    验证对象是否不为null, 无法查检长度为0的字符串</span><br><span class="line">@NotBlank   检查约束字符串是不是Null还有被Trim的长度是否大于0,只对字符串,且会去掉前后空格.</span><br><span class="line">@NotEmpty   检查约束元素是否为NULL或者是EMPTY.</span><br><span class="line">    </span><br><span class="line">Booelan检查</span><br><span class="line">@AssertTrue     验证 Boolean 对象是否为 true  </span><br><span class="line">@AssertFalse    验证 Boolean 对象是否为 false  </span><br><span class="line">    </span><br><span class="line">长度检查</span><br><span class="line">@Size(min=, max=) 验证对象（Array,Collection,Map,String）长度是否在给定的范围之内  </span><br><span class="line">@Length(min=, max=) string is between min and max included.</span><br><span class="line"></span><br><span class="line">日期检查</span><br><span class="line">@Past       验证 Date 和 Calendar 对象是否在当前时间之前  </span><br><span class="line">@Future     验证 Date 和 Calendar 对象是否在当前时间之后  </span><br><span class="line">@Pattern    验证 String 对象是否符合正则表达式的规则</span><br><span class="line"></span><br><span class="line">.......等等</span><br><span class="line">除此以外，我们还可以自定义一些数据校验规则</span><br></pre></td></tr></table></figure></li>
-</ul>
-<p>##多环境切换</p>
+                <h1 id="1-数字颠倒"><a href="#1-数字颠倒" class="headerlink" title="1.数字颠倒"></a>1.数字颠倒</h1><p>题目：将输入的字符串反向输出</p>
 <ul>
-<li>yml配置文件中切换不同的环境<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">server:</span><br><span class="line">  port: 8081</span><br><span class="line">#选择要激活那个环境块</span><br><span class="line">spring:</span><br><span class="line">  profiles:</span><br><span class="line">    active: prod</span><br><span class="line"></span><br><span class="line">---</span><br><span class="line">server:</span><br><span class="line">  port: 8083</span><br><span class="line">spring:</span><br><span class="line">  profiles: dev #配置环境的名称</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">---</span><br><span class="line"></span><br><span class="line">server:</span><br><span class="line">  port: 8084</span><br><span class="line">spring:</span><br><span class="line">  profiles: prod  #配置环境的名称</span><br></pre></td></tr></table></figure>
-这是使用内嵌tomcat会使用不同的端口号。</li>
-<li>springboot 启动会扫描以下位置的application.properties或者application.yml文件作为Spring boot的默认配置文件：<br>优先级1：项目路径下的config文件夹配置文件（file：./config/）<br>优先级2：项目路径下配置文件（file：./）<br>优先级3：资源路径下的config文件夹配置文件（classpath：/config/）<br>优先级4：资源路径下配置文件（classpath：/）  </li>
+<li><p>next()不会吸取字符前/后的空格/Tab键，只吸取字符，开始吸取字符（字符前后不算）直到遇到空格/Tab键/回车截止吸取  </p>
+</li>
+<li><p>nextLine()吸取字符前后的空格/Tab键，回车键截止。</p>
+</li>
+<li><p>当对字符串进行修改的时候，需要使用 StringBuffer 和 StringBuilder 类。</p>
+<p>和 String 类不同的是，StringBuffer 和 StringBuilder 类的对象能够被多次的修改，并且不产生新的未使用对象。</p>
+<p>在使用 StringBuffer 类时，每次都会对 StringBuffer 对象本身进行操作，而不是生成新的对象，所以如果需要对字符串进行修改推荐使用 StringBuffer。</p>
+</li>
+<li><p>reverse()反转方法</p>
+</li>
 </ul>
-<h2 id="Web开发静态资源"><a href="#Web开发静态资源" class="headerlink" title="Web开发静态资源"></a>Web开发静态资源</h2><ul>
-<li>首先观看静态资源映射规则：<br>SpringBoot中，SpringMVC的web配置都在 WebMvcAutoConfiguration 这个配置类里面；<br>我们可以去看看 WebMvcAutoConfigurationAdapter 中有很多配置方法；<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">@Override</span><br><span class="line">public void addResourceHandlers(ResourceHandlerRegistry registry) &#123;</span><br><span class="line">    if (!this.resourceProperties.isAddMappings()) &#123;</span><br><span class="line">        // 已禁用默认资源处理</span><br><span class="line">        logger.debug(&quot;Default resource handling disabled&quot;);</span><br><span class="line">        return;</span><br><span class="line">    &#125;</span><br><span class="line">    // 缓存控制</span><br><span class="line">    Duration cachePeriod = this.resourceProperties.getCache().getPeriod();</span><br><span class="line">    CacheControl cacheControl = this.resourceProperties.getCache().getCachecontrol().toHttpCacheControl();</span><br><span class="line">    // webjars 配置</span><br><span class="line">    if (!registry.hasMappingForPattern(&quot;/webjars/**&quot;)) &#123;</span><br><span class="line">        customizeResourceHandlerRegistration(registry.addResourceHandler(&quot;/webjars/**&quot;)</span><br><span class="line">                                             .addResourceLocations(&quot;classpath:/META-INF/resources/webjars/&quot;)</span><br><span class="line">                                             .setCachePeriod(getSeconds(cachePeriod)).setCacheControl(cacheControl));</span><br><span class="line">    &#125;</span><br><span class="line">    // 静态资源配置</span><br><span class="line">    String staticPathPattern = this.mvcProperties.getStaticPathPattern();</span><br><span class="line">    if (!registry.hasMappingForPattern(staticPathPattern)) &#123;</span><br><span class="line">        customizeResourceHandlerRegistration(registry.addResourceHandler(staticPathPattern)</span><br><span class="line">                                             .addResourceLocations(getResourceLocations(this.resourceProperties.getStaticLocations()))</span><br><span class="line">                                             .setCachePeriod(getSeconds(cachePeriod)).setCacheControl(cacheControl));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-可以发现比如所有的 /webjars/** ， 都需要去 classpath:/META-INF/resources/webjars/ 找对应的资源；<br>之后去找staticPathPattern发现第二种映射规则 ：/** , 访问当前的项目任意资源，它会去resourceProperties 这个类：<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">// 进入方法</span><br><span class="line">public String[] getStaticLocations() &#123;</span><br><span class="line">    return this.staticLocations;</span><br><span class="line">&#125;</span><br><span class="line">// 找到对应的值</span><br><span class="line">private String[] staticLocations = CLASSPATH_RESOURCE_LOCATIONS;</span><br><span class="line">// 找到路径</span><br><span class="line">private static final String[] CLASSPATH_RESOURCE_LOCATIONS = &#123; </span><br><span class="line">    &quot;classpath:/META-INF/resources/&quot;,</span><br><span class="line">  &quot;classpath:/resources/&quot;, </span><br><span class="line">    &quot;classpath:/static/&quot;, </span><br><span class="line">    &quot;classpath:/public/&quot; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-<li>可以得出<br>“classpath:/META-INF/resources/“<br>“classpath:/resources/“<br>“classpath:/static/“<br>“classpath:/public/“<br>这4个静态资源路基springbott可以访问  </li>
-<li>在public 中创建 index.html<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang=&quot;en&quot;&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;meta charset=&quot;UTF-8&quot;&gt;</span><br><span class="line">    &lt;title&gt;Title&lt;/title&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">&lt;h1&gt;首页&lt;/h1&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
-然后访问tomcat 判断是否成功<h2 id="Thymeleaf模板引擎"><a href="#Thymeleaf模板引擎" class="headerlink" title="Thymeleaf模板引擎"></a>Thymeleaf模板引擎</h2></li>
-<li>添加启动器依赖<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;!--thymeleaf--&gt;</span><br><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;spring-boot-starter-thymeleaf&lt;/artifactId&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br></pre></td></tr></table></figure></li>
-<li>Thymeleaf的自动配置类：ThymeleafProperties<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">@ConfigurationProperties(</span><br><span class="line">    prefix = &quot;spring.thymeleaf&quot;</span><br><span class="line">)</span><br><span class="line">public class ThymeleafProperties &#123;</span><br><span class="line">    private static final Charset DEFAULT_ENCODING;</span><br><span class="line">    public static final String DEFAULT_PREFIX = &quot;classpath:/templates/&quot;;</span><br><span class="line">    public static final String DEFAULT_SUFFIX = &quot;.html&quot;;</span><br><span class="line">    private boolean checkTemplate = true;</span><br><span class="line">    private boolean checkTemplateLocation = true;</span><br><span class="line">    private String prefix = &quot;classpath:/templates/&quot;;</span><br><span class="line">    private String suffix = &quot;.html&quot;;</span><br><span class="line">    private String mode = &quot;HTML&quot;;</span><br><span class="line">    private Charset encoding;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-<li>编写一个TestController<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">@Controller</span><br><span class="line">public class TestController &#123;</span><br><span class="line">    </span><br><span class="line">    @RequestMapping(&quot;/t1&quot;)</span><br><span class="line">    public String test1()&#123;</span><br><span class="line">        //classpath:/templates/test.html</span><br><span class="line">        return &quot;test&quot;;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-启动项目测试<h2 id="Thymeleaf-语法学习"><a href="#Thymeleaf-语法学习" class="headerlink" title="Thymeleaf 语法学习"></a>Thymeleaf 语法学习</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br></pre></td><td class="code"><pre><span class="line">Simple expressions:（表达式语法）</span><br><span class="line">Variable Expressions: $&#123;...&#125;：获取变量值；OGNL；</span><br><span class="line">    1）、获取对象的属性、调用方法</span><br><span class="line">    2）、使用内置的基本对象：#18</span><br><span class="line">         #ctx : the context object.</span><br><span class="line">         #vars: the context variables.</span><br><span class="line">         #locale : the context locale.</span><br><span class="line">         #request : (only in Web Contexts) the HttpServletRequest object.</span><br><span class="line">         #response : (only in Web Contexts) the HttpServletResponse object.</span><br><span class="line">         #session : (only in Web Contexts) the HttpSession object.</span><br><span class="line">         #servletContext : (only in Web Contexts) the ServletContext object.</span><br><span class="line"></span><br><span class="line">    3）、内置的一些工具对象：</span><br><span class="line">　　　　　　#execInfo : information about the template being processed.</span><br><span class="line">　　　　　　#uris : methods for escaping parts of URLs/URIs</span><br><span class="line">　　　　　　#conversions : methods for executing the configured conversion service (if any).</span><br><span class="line">　　　　　　#dates : methods for java.util.Date objects: formatting, component extraction, etc.</span><br><span class="line">　　　　　　#calendars : analogous to #dates , but for java.util.Calendar objects.</span><br><span class="line">　　　　　　#numbers : methods for formatting numeric objects.</span><br><span class="line">　　　　　　#strings : methods for String objects: contains, startsWith, prepending/appending, etc.</span><br><span class="line">　　　　　　#objects : methods for objects in general.</span><br><span class="line">　　　　　　#bools : methods for boolean evaluation.</span><br><span class="line">　　　　　　#arrays : methods for arrays.</span><br><span class="line">　　　　　　#lists : methods for lists.</span><br><span class="line">　　　　　　#sets : methods for sets.</span><br><span class="line">　　　　　　#maps : methods for maps.</span><br><span class="line">　　　　　　#aggregates : methods for creating aggregates on arrays or collections.</span><br><span class="line">==================================================================================</span><br><span class="line"></span><br><span class="line">  Selection Variable Expressions: *&#123;...&#125;：选择表达式：和$&#123;&#125;在功能上是一样；</span><br><span class="line">  Message Expressions: #&#123;...&#125;：获取国际化内容</span><br><span class="line">  Link URL Expressions: @&#123;...&#125;：定义URL；</span><br><span class="line">  Fragment Expressions: ~&#123;...&#125;：片段引用表达式</span><br><span class="line"></span><br><span class="line">Literals（字面量）</span><br><span class="line">      Text literals: &#x27;one text&#x27; , &#x27;Another one!&#x27; ,…</span><br><span class="line">      Number literals: 0 , 34 , 3.0 , 12.3 ,…</span><br><span class="line">      Boolean literals: true , false</span><br><span class="line">      Null literal: null</span><br><span class="line">      Literal tokens: one , sometext , main ,…</span><br><span class="line">      </span><br><span class="line">Text operations:（文本操作）</span><br><span class="line">    String concatenation: +</span><br><span class="line">    Literal substitutions: |The name is $&#123;name&#125;|</span><br><span class="line">    </span><br><span class="line">Arithmetic operations:（数学运算）</span><br><span class="line">    Binary operators: + , - , * , / , %</span><br><span class="line">    Minus sign (unary operator): -</span><br><span class="line">    </span><br><span class="line">Boolean operations:（布尔运算）</span><br><span class="line">    Binary operators: and , or</span><br><span class="line">    Boolean negation (unary operator): ! , not</span><br><span class="line">    </span><br><span class="line">Comparisons and equality:（比较运算）</span><br><span class="line">    Comparators: &gt; , &lt; , &gt;= , &lt;= ( gt , lt , ge , le )</span><br><span class="line">    Equality operators: == , != ( eq , ne )</span><br><span class="line">    </span><br><span class="line">Conditional operators:条件运算（三元运算符）</span><br><span class="line">    If-then: (if) ? (then)</span><br><span class="line">    If-then-else: (if) ? (then) : (else)</span><br><span class="line">    Default: (value) ?: (defaultvalue)</span><br><span class="line">    </span><br><span class="line">Special tokens:</span><br><span class="line">    No-Operation: _</span><br></pre></td></tr></table></figure></li>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">import java.util.*;</span><br><span class="line">public class Main&#123;</span><br><span class="line">public static void main(String[] args)</span><br><span class="line">&#123;</span><br><span class="line">Scanner in=new Scanner(System.in);</span><br><span class="line">String str=in.nextLine();</span><br><span class="line">StringBuffer rs=new StringBuffer(str);</span><br><span class="line">rs.reverse();</span><br><span class="line">System.out.println(rs);</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="2-句子逆序"><a href="#2-句子逆序" class="headerlink" title="2.句子逆序"></a>2.句子逆序</h1><p>题目：输入一个英文语句，每个单词用空格隔开。保证输入只包含空格和字母。</p>
+<ul>
+<li><p>理解java输入hasNext()和hasNextLine()方法的区别     </p>
+<p>hasNext()方法会认为之后再没有非空字符,会返回一个<code>false</code></p>
+<p>hasNextLine()方法会认为换行符\n是一个空行,符合行的匹配模式,则会返回一个<code>true</code>,但实际上由于之后再没有数据了,所以会在读取输入流的时候发生异常,从而导致整个运行报错。</p>
+<p>因此解决这个问题的话：采用hasNextXxxx() 的话，后面也要用nextXxxx()</p>
+</li>
+<li><p>split() 方法用于把一个字符串分割成字符串数组。</p>
+<p>之后依据分格的数组输出即可。</p>
+</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">import java.util.*;</span><br><span class="line"> </span><br><span class="line">public class Main&#123;</span><br><span class="line">    public static void main(String[] args)&#123;</span><br><span class="line">        Scanner scan = new Scanner(System.in);</span><br><span class="line">        while (scan.hasNextLine())&#123;</span><br><span class="line">            String s = scan.nextLine();</span><br><span class="line">            String [] arr = s.split(&quot; &quot;);</span><br><span class="line">            for (int i = arr.length - 1; i &gt;= 0; i--)&#123;</span><br><span class="line">                System.out.print(i == 0 ? arr[i] : arr[i] + &quot; &quot;);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h1 id="3-字符串排序"><a href="#3-字符串排序" class="headerlink" title="3.字符串排序"></a>3.字符串排序</h1><p>题目:给定n个字符串，请对n个字符串按照字典序排列。</p>
+<ul>
+<li><p>Arrays.sort()方法：该方法是Arrays类的静态方法，用于对数组排序。</p>
+<p>1、Arrays.sort(int[] a)</p>
+<p>这种形式是对一个数组的所有元素进行排序，并且是按从小到大的顺序。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">import java.util.Arrays;</span><br><span class="line">  </span><br><span class="line"> public class Main &#123;</span><br><span class="line">     public static void main(String[] args) &#123;</span><br><span class="line">          </span><br><span class="line">         int[] a = &#123;9, 8, 7, 2, 3, 4, 1, 0, 6, 5&#125;;</span><br><span class="line">         Arrays.sort(a);</span><br><span class="line">         for(int i = 0; i &lt; a.length; i ++) &#123;</span><br><span class="line">              System.out.print(a[i] + &quot; &quot;);</span><br><span class="line">         &#125;</span><br><span class="line">     &#125;</span><br><span class="line"> </span><br><span class="line"> &#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>2、Arrays.sort(int[] a, int fromIndex, int toIndex)</p>
+<p>这种形式是对数组部分排序，也就是对数组a的下标从fromIndex到toIndex-1的元素排序.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">import java.util.Arrays;</span><br><span class="line"></span><br><span class="line">public class Main &#123;</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        </span><br><span class="line">        int[] a = &#123;9, 8, 7, 2, 3, 4, 1, 0, 6, 5&#125;;</span><br><span class="line">        Arrays.sort(a, 0, 3);</span><br><span class="line">        for(int i = 0; i &lt; a.length; i ++) &#123;</span><br><span class="line">            System.out.print(a[i] + &quot; &quot;);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>3、public static void sort(T[] a,int fromIndex,int toIndex, Comparator c) （可以自定义排序规则）</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"> 1 package test;</span><br><span class="line"> 2 </span><br><span class="line"> 3 import java.util.Arrays;</span><br><span class="line"> 4 import java.util.Comparator;</span><br><span class="line"> 5 </span><br><span class="line"> 6 public class Main &#123;</span><br><span class="line"> 7     public static void main(String[] args) &#123;</span><br><span class="line"> 8         //注意，要想改变默认的排列顺序，不能使用基本类型（int,double, char）</span><br><span class="line"> 9         //而要使用它们对应的类</span><br><span class="line">10         Integer[] a = &#123;9, 8, 7, 2, 3, 4, 1, 0, 6, 5&#125;;</span><br><span class="line">11         //定义一个自定义类MyComparator的对象</span><br><span class="line">12         Comparator cmp = new MyComparator();</span><br><span class="line">13         Arrays.sort(a, cmp);</span><br><span class="line">14         for(int i = 0; i &lt; a.length; i ++) &#123;</span><br><span class="line">15             System.out.print(a[i] + &quot; &quot;);</span><br><span class="line">16         &#125;</span><br><span class="line">17     &#125;</span><br><span class="line">18 &#125;</span><br><span class="line">19 //Comparator是一个接口</span><br><span class="line">21 class MyComparator implements Comparator&lt;Integer&gt;&#123;</span><br><span class="line">22     @Override</span><br><span class="line">23     public int compare(Integer o1, Integer o2) &#123;</span><br><span class="line">24         //如果n1小于n2，我们就返回正值，如果n1大于n2我们就返回负值，</span><br><span class="line">25         //这样颠倒一下，就可以实现反向排序了</span><br><span class="line">26         if(o1 &lt; o2) &#123; </span><br><span class="line">27             return 1;</span><br><span class="line">28         &#125;else if(o1 &gt; o2) &#123;</span><br><span class="line">29             return -1;</span><br><span class="line">30         &#125;else &#123;</span><br><span class="line">31             return 0;</span><br><span class="line">32         &#125;</span><br><span class="line">33     &#125;</span><br><span class="line">34     </span><br><span class="line">35 &#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>题目解法</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">import java.io.*;</span><br><span class="line">import java.util.*;</span><br><span class="line"> </span><br><span class="line">public class Main &#123;</span><br><span class="line">    public static void main(String[] args) throws IOException &#123;</span><br><span class="line">        withArraysAPI();</span><br><span class="line">    &#125;</span><br><span class="line"> </span><br><span class="line">    public static void withArraysAPI() throws IOException </span><br><span class="line">   &#123;</span><br><span class="line">        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));</span><br><span class="line">        int n = Integer.parseInt(br.readLine());</span><br><span class="line">        String[] ss = new String[n];</span><br><span class="line">        for (int i = 0; i &lt; n; i++) &#123;</span><br><span class="line">            ss[i] = br.readLine();</span><br><span class="line">        &#125;</span><br><span class="line">        br.close();</span><br><span class="line"> </span><br><span class="line">        Arrays.sort(ss);</span><br><span class="line"> </span><br><span class="line">        for(int i = 0; i &lt; n; i++) &#123;</span><br><span class="line">            System.out.println(ss[i]);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="4-求int型正整数在内存中存储时1的个数"><a href="#4-求int型正整数在内存中存储时1的个数" class="headerlink" title="4.求int型正整数在内存中存储时1的个数"></a>4.求int型正整数在内存中存储时1的个数</h1><p>题目；输入一个int型的正整数，计算出该int型数据在内存中存储时1的个数。（内存中为二进制存储）</p>
+<ul>
+<li><p>n=n&amp;(n-1)”的直接应用就是去掉“n的二进制”的最后一个1</p>
+<p>eg：5的话就是101，只可以减去2次1，因此计算出的1个数为2个。</p>
+</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">import java.util.Scanner;</span><br><span class="line"> </span><br><span class="line">public class Main&#123;</span><br><span class="line">    public static void main(String[] args)&#123;</span><br><span class="line">        Scanner in = new Scanner(System.in);</span><br><span class="line">        int num = in.nextInt();    //读取数字</span><br><span class="line">        int n = 0;    //计数变量</span><br><span class="line">        while(num!=0)</span><br><span class="line">        &#123;</span><br><span class="line">            num = num&amp;(num-1);</span><br><span class="line">            n++;</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println(n);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
 </ul>
 
                 
@@ -688,7 +698,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://github.com/xg-123456/xg-123456.gtihub.io.git/xg-123456.gtihub.io/2021/09/16/9-16-xue-xi-ri-ji/">https://github.com/xg-123456/xg-123456.gtihub.io.git/xg-123456.gtihub.io/2021/09/16/9-16-xue-xi-ri-ji/</a>
+                    <a href="https://github.com/xg-123456/xg-123456.gtihub.io.git/xg-123456.gtihub.io/2021/10/05/bi-shi-ti/">https://github.com/xg-123456/xg-123456.gtihub.io.git/xg-123456.gtihub.io/2021/10/05/bi-shi-ti/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -726,8 +736,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/xg-123456.gtihub.io/tags/springboot%E6%97%A5%E8%AE%B0/">
-                                    <span class="chip bg-color">springboot日记</span>
+                                <a href="/xg-123456.gtihub.io/tags/%E7%BC%96%E7%A8%8B%E7%BB%83%E4%B9%A0%EF%BC%88%E7%AC%94%E8%AF%95%EF%BC%89/">
+                                    <span class="chip bg-color">编程练习（笔试）</span>
                                 </a>
                             
                         </div>
@@ -771,9 +781,56 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
+            <div class="card">
+                <a href="/xg-123456.gtihub.io/2021/10/05/bi-shi-ti/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="/xg-123456.gtihub.io/medias/featureimages/7.jpg" class="responsive-img" alt="笔试题">
+                        
+                        <span class="card-title">笔试题</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-10-05
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            西瓜
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/xg-123456.gtihub.io/tags/%E7%BC%96%E7%A8%8B%E7%BB%83%E4%B9%A0%EF%BC%88%E7%AC%94%E8%AF%95%EF%BC%89/">
+                        <span class="chip bg-color">编程练习（笔试）</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
             <div class="card">
                 <a href="/xg-123456.gtihub.io/2021/09/23/9-23ssm-fu-xi/">
                     <div class="card-image">
@@ -791,9 +848,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-09-23
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-09-23
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -811,55 +868,6 @@
                     
                     <a href="/xg-123456.gtihub.io/tags/SSM/">
                         <span class="chip bg-color">SSM</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/xg-123456.gtihub.io/2021/09/15/9-15-xue-xi-ri-ji/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="/xg-123456.gtihub.io/medias/featureimages/14.jpg" class="responsive-img" alt="9.15学习日记">
-                        
-                        <span class="card-title">9.15学习日记</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-09-15
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/xg-123456.gtihub.io/categories/springboot%E6%97%A5%E8%AE%B0/" class="post-category">
-                                    springboot日记
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/xg-123456.gtihub.io/tags/springboot%E6%97%A5%E8%AE%B0/">
-                        <span class="chip bg-color">springboot日记</span>
                     </a>
                     
                 </div>
